@@ -1,11 +1,36 @@
 {
-  "name": "react-from-scratch",
+  "name": "react-simple",
   "version": "1.0.0",
-  "description": "An exercise to create a React app without bloat",
+  "description": "A very basic version of React without bloat",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve --mode development --content-base src/",
+    "build": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^5.0.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "bin": {
+    "react-simple": "./bin/start.js"
+  }
 }
