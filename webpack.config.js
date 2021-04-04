@@ -45,6 +45,12 @@ module.exports = {
 			},
 		],
 	},
+	resolve: {
+		extensions: [".js", ".jsx"], // If no extension is added to the import file, try using these
+		alias: {
+			["~"]: path.resolve(__dirname, "view/src"),
+		},
+	},
 	plugins: [
 		new HtmlWebPackPlugin({
 			template: "./src/index.html",
